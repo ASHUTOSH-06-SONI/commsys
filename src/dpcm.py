@@ -21,7 +21,7 @@ print("Original range:", np.min(m),",", np.max(m))
 print("Error range:", np.min(error), ",", np.max(error))
 
 #quantize 
-bits_dpcm = 8
+bits_dpcm = 4
 levels_dpcm = 2**bits_dpcm
 
 emin = np.min(error)
