@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 from scipy.fft import fft,fftfreq
 from scipy.signal import butter, sosfiltfilt
 
-
-
-
 #Single tone amplitude modulation
 Am = 1
 Ac = 2
@@ -87,3 +84,8 @@ plt.grid()
 
 plt.tight_layout()
 plt.show()
+
+print("Bandwidth = ", 2*fm," Hz")
+print("Message Signal power = ",np.mean(m_t**2))
+print("Carrier Signal power = ",np.mean(c_t**2))
+print("Amplitude Modulated Signal power = ",np.mean(c_t**2)*(1+(mu**2)/2))
